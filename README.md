@@ -9,7 +9,7 @@
 ## Usage
 Controller generator (respond_with by default):
 ```bash
-$ rails g actionscaffold:install
+$ rails g scaffold_controller:install
 ```
 Result:
 ```ruby
@@ -73,7 +73,7 @@ end
 
 View generator (Bootstrap by default):
 ```bash
-$ rails g view:install --ui=bootstrap
+$ rails g scaffold_view:install --ui=bootstrap
 ```
 Or with custom theme:
 ```bash
