@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    actionscaffold (0.2.0.pre)
+    actionscaffold (0.2.1.pre)
       rails (~> 4.2.0)
       responders (~> 2.2.0)
 
