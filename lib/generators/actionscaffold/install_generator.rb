@@ -4,7 +4,7 @@
 #  Created by Marko Tunjic on 15/07/16.
 #  Copyright © 2016 Marko Tunjic. All rights reserved.
 #
-module Scaffolder
+module ActionsSaffold
    module Generators
     class InstallGenerator < Rails::Generators::Base
       desc "This generator override default scaffold generator for controllers."

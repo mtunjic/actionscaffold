@@ -1,4 +1,4 @@
-# Scaffolder
+# Action Scaffold
 
 * Clean & DRY Rails controllers.
 * View support for bootstrap 4, uikit, skeleton and html5boilerplate.
@@ -9,54 +9,64 @@
 ## Usage
 Controller generator (respond_with by default):
 ```bash
-$ rails g scaffolder:install
+$ rails g actionscaffold:install
 ```
 Result:
 ```ruby
-class UsersController < ApplicationController
-  respond_to :html, :json
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+class BooksController < ApplicationController
+  before_action :set_book,
+    only: [:show, :edit, :update, :destroy]
 
+  # GET /books
   def index
-    @users = User.all
-    respond_with(@users)
+    @books = Book.all
+    respond_with(@books)
   end
 
+  # GET /books/1
   def show
-    respond_with(@user)
+    respond_with(@book)
   end
 
+  # GET /books/new
   def new
-    @user = User.new
-    respond_with(@user)
+    @book = Book.new
+    respond_with(@book)
   end
 
+  # GET /books/1/edit
   def edit
   end
 
+  # POST /books
   def create
-    @user = User.new(user_params)
-    @user.save
-    respond_with(@user)
+    @book = Book.new(book_params)
+    @book.save
+    respond_with(@book)
   end
 
+  # PATCH/PUT /books/1
   def update
-    @user.update(user_params)
-    respond_with(@user)
+    @book.update(book_params)
+    respond_with(@book)
   end
 
+  # DELETE /books/1
   def destroy
-    @user.destroy
-    respond_with(@user)
+    @book.destroy
+    respond_with(@book)
   end
 
   private
-  def set_user
-    @user = User.find(params[:id])
+
+  def set_book
+    @book = Book.find(params[:id])
   end
 
-  def user_params
-    params.require(:user).permit(:name)
+  # Only allow a trusted parameter "white list" through.
+  def book_params
+    params.require(:book).
+      permit(:title, :author)
   end
 end
 ```
