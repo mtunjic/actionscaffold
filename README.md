@@ -93,7 +93,7 @@ Result:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'scaffolder'
+gem 'actionscaffold'
 ```
 
 And then execute:
@@ -103,7 +103,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install scaffolder
+$ gem install actionscaffold
 ```
 
 # To do
@@ -113,7 +113,7 @@ $ gem install scaffolder
 - [ ] [html5boilerplate](https://html5boilerplate.com)
 
 ## Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/mtunjic/scaffolder.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mtunjic/actionscaffold.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
