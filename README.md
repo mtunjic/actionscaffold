@@ -72,7 +72,7 @@ end
 
 View generator (Bootstrap by default):
 ```bash
-$ rails g scaffold_view:install --ui=bootstrap
+$ rails g scaffold_view:install
 ```
 Or with custom theme:
 ```bash
@@ -86,8 +86,8 @@ Result:
   <%= f.email_field :email, autofocus: true, class: "form-control" %>
 </div>
 ```
-![alt text](http://i63.tinypic.com/302b22f.png "Errors")
-![alt text](http://i66.tinypic.com/349b0og.png "Forms")
+![Errors](http://i63.tinypic.com/302b22f.png =600x "Errors")
+![Forms](http://i66.tinypic.com/349b0og.png =600x "Forms")
 
 
 ## Installation
