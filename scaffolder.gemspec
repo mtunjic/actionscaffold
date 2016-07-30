@@ -7,11 +7,11 @@ require "scaffolder/version"
 Gem::Specification.new do |s|
   s.name        = "scaffolder"
   s.version     = Scaffolder::VERSION
-  s.authors     = [""]
+  s.authors     = ["Marko Tunjic"]
   s.email       = ["marko.tunjic@live.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary ...."
-  s.description = "TODO: Description ...."
+  s.homepage    = "https://github.com/mtunjic/scaffolder"
+  s.summary     = "Better default templates for Rails scaffold generator."
+  # s.description = "TODO: Description ...."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
