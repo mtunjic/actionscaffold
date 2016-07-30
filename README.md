@@ -3,6 +3,8 @@
 * Clean & DRY Rails controllers.
 * View support for bootstrap 4, uikit, skeleton and html5boilerplate.
 * Select box for a belongs_to relationship.
+* Nested resources
+
 
 ## Usage
 Controller generator (respond_with by default):
