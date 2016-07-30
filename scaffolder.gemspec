@@ -7,7 +7,7 @@ require "scaffolder/version"
 Gem::Specification.new do |s|
   s.name        = "scaffolder"
   s.version     = Scaffolder::VERSION
-  s.authors     = ["mtunjic"]
+  s.authors     = ["Marko Tunjic"]
   s.email       = ["marko.tunjic@live.com"]
   s.homepage    = "https://github.com/mtunjic/scaffolder"
   s.summary     = "Better default templates for Rails scaffold generator."
