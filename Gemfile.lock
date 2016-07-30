@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    actionscaffold (0.1.4.pre)
+    actionscaffold (0.1.5.pre)
       rails (~> 5.0.0)
 
 GEM
