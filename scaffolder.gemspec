@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.name        = "scaffolder"
   s.version     = Scaffolder::VERSION
   s.authors     = [""]
-  s.email       = ["marko.tunjic@icloud.com"]
+  s.email       = ["marko.tunjic@live.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Scaffolder."
-  s.description = "TODO: Description of Scaffolder."
+  s.summary     = "TODO: Summary ...."
+  s.description = "TODO: Description ...."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
