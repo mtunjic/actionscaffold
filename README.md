@@ -9,6 +9,7 @@
 ## Usage
 Controller generator (respond_with by default):
 ```bash
+$ rails g responders:install
 $ rails g scaffold_controller:install
 ```
 Result:
@@ -94,6 +95,7 @@ Result:
 Add this line to your application's Gemfile:
 
 ```ruby
+gem 'responders'
 gem 'actionscaffold'
 ```
 
