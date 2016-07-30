@@ -11,7 +11,8 @@ Gem::Specification.new do |s|
   s.email       = ["marko.tunjic@live.com"]
   s.homepage    = "https://github.com/mtunjic/scaffolder"
   s.summary     = "Better default templates for Rails scaffold generator."
-  # s.description = "TODO: Description ...."
+  s.description = "Make Rails controllers clean & DRY.
+                   Rails view support for bootstrap 4, uikit, skeleton and html5boilerplate."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

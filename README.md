@@ -60,6 +60,11 @@ View generator (Bootstrap by default):
 ```bash
 $ rails g view:install
 ```
+Or with custom theme:
+```bash
+$ rails g view User name password --ui=bootstrap
+```
+
 Result:
 ```erb
 <div class="form-group">
@@ -85,6 +90,12 @@ Or install it yourself as:
 ```bash
 $ gem install scaffolder
 ```
+
+# To do
+- [X] [bootstrap 4](http://getbootstrap.com)
+- [ ] [uikit](http://getuikit.com)
+- [ ] [skeleton](http://getskeleton.com)
+- [ ] [html5boilerplate](https://html5boilerplate.com)
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/mtunjic/scaffolder.
