@@ -1,5 +1,8 @@
 # Scaffolder
 
+* Clean & DRY Rails controllers.
+* View support for bootstrap 4, uikit, skeleton and html5boilerplate.
+* Select box for a belongs_to relationship.
 
 ## Usage
 Controller generator (respond_with by default):
