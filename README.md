@@ -7,7 +7,7 @@
 ## Usage
 Controller generator (respond_with by default):
 ```bash
-$ rails g controller:install
+$ rails g scaffolder:install
 ```
 Result:
 ```ruby
@@ -61,11 +61,11 @@ end
 
 View generator (Bootstrap by default):
 ```bash
-$ rails g view:install
+$ rails g view:install --ui=bootstrap
 ```
 Or with custom theme:
 ```bash
-$ rails g view User name password --ui=bootstrap
+$ rails g view User name password
 ```
 
 Result:
