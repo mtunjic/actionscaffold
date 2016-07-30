@@ -76,7 +76,7 @@ $ rails g scaffold_view:install --ui=bootstrap
 ```
 Or with custom theme:
 ```bash
-$ rails g view User name password
+$ rails g scaffold_view:install --ui=bootstrap
 ```
 
 Result:
