@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails"
   s.add_dependency "responders", "~> 2.2.0"
+  s.add_dependency "bootstrap", "~> 4.0.0.alpha3"
+
 
   s.add_development_dependency "sqlite3"
 end
