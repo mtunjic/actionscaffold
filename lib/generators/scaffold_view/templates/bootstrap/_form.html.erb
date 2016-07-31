@@ -1,46 +1,49 @@
-<article class="panel panel-primary">
-  <header class="panel-heading">
-    <h1><%= singular_table_name.titleize %></h1>
-  </header>
-  <section class="panel-body">
-    <%%= form_for(@<%= singular_table_name %>) do |f| %>
-      <%% if @<%= singular_table_name %>.errors.any? %>
-        <aside class="panel panel-danger alert-devise">
-          <header class="panel-heading"><%%= pluralize(@<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</header>
-          <section class="panel-body">
-            <ul>
-              <%% @<%= singular_table_name %>.errors.full_messages.each do |msg| %>
-                <li><%%= msg %></li>
-              <%% end %>
-            </ul>
-          </section>
-        </aside>
+<%% if @<%= singular_table_name %>.errors.any? %>
+  <aside class="panel panel-danger alert-devise">
+    <header class="panel-heading">
+      <%%= pluralize(@<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</header>
+    <section class="panel-body">
+      <ul>
+        <%% @<%= singular_table_name %>.errors.full_messages.each do |msg| %>
+          <li><%%= msg %></li>
+        <%% end %>
+      </ul>
+    </section>
+  </aside>
+  </div>
+<%% end %>
+
+<%%= form_for(@<%= singular_table_name %>) do |f| %>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
+      <h1><%= singular_table_name.titleize %></h1>
+    </header>
+    <section class="panel-body">
+      <% attributes.each do |attribute| -%>
+        <div class="form-group">
+      <% if attribute.password_digest? -%>
+          <%%= f.label :password %>
+          <%%= f.password_field :password, class: "form-control" %>
         </div>
-      <%% end %>
-    <% attributes.each do |attribute| -%>
-      <div class="form-group">
-    <% if attribute.password_digest? -%>
-        <%%= f.label :password %>
-        <%%= f.password_field :password, class: "form-control" %>
-      </div>
-      <div>
-        <%%= f.label :password_confirmation %>
-        <%%= f.password_field :password_confirmation, class: "form-control" %>
-    <% else -%>
-      <%- if attribute.reference? -%>
-        <%%= f.label :<%= attribute.column_name %> %>
-        <%%= f.collection_select :<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :name, prompt: true  %>
-      <%- else -%>
-        <%%= f.label :<%= attribute.name %> %>
-        <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, class: "form-control" %>
-      <%- end -%>
-    <% end -%>
-      </div>
-    <% end -%>
-  </section>
-  <footer class="panel-footer">
-  </footer>
-</article>
+        <div>
+          <%%= f.label :password_confirmation %>
+          <%%= f.password_field :password_confirmation, class: "form-control" %>
+      <% else -%>
+        <%- if attribute.reference? -%>
+          <%%= f.label :<%= attribute.column_name %> %>
+          <%%= f.collection_select :<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :name, prompt: true  %>
+        <%- else -%>
+          <%%= f.label :<%= attribute.name %> %>
+          <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, class: "form-control" %>
+        <%- end -%>
+      <% end -%>
+        </div>
+      <% end -%>
+    </section>
+    <footer class="panel-footer">
+    </footer>
+  </article>
+
   <div class="form-group actions">
     <%%= f.submit :Submit, class: "btn btn-primary" %>
   </div>
