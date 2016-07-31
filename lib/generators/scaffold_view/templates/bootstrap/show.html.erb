@@ -1,0 +1,17 @@
+<article class="panel panel-primary">
+  <header class="panel-heading">
+    <h1><%= singular_table_name.titleize %></h1>
+  </header>
+  <section class="panel-body">
+    <dl class="dl-horizontal">
+      <% attributes.reject(&:password_digest?).each do |attribute| -%>
+        <dt><strong><%= attribute.human_name %>:</strong></dt>
+        <dd><%%= @<%= singular_table_name %>.<%= attribute.name %> %></dd>
+      <% end -%>
+    </dl>
+  </section>
+  <footer class="panel-footer">
+  </footer>
+</article>
+<%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
+<%%= link_to 'Back', <%= index_helper %>_path %>
