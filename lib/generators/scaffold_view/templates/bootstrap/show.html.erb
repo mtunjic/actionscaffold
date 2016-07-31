@@ -5,9 +5,15 @@
   <section class="panel-body">
     <dl class="dl-horizontal">
       <% attributes.reject(&:password_digest?).each do |attribute| -%>
-        <dt><strong><%= attribute.human_name %>:</strong></dt>
-        <dd><%%= @<%= singular_table_name %>.<%= attribute.name %> %></dd>
+      <dt><strong><%= attribute.human_name %>:</strong></dt>
+      <dd>
+      <% if attribute.reference? -%>
+      <%%= @<%= singular_table_name %>.<%= attribute.name %>.name %>
+      <% else %>
+      <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
+      </dd>
       <% end -%>
+      <% end %>
     </dl>
   </section>
   <footer class="panel-footer">
