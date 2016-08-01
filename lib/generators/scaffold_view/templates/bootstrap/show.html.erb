@@ -11,7 +11,8 @@
     </dl>
   </section>
   <footer class="panel-footer">
+    <%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
+    <%%= link_to 'Back', <%= index_helper %>_path %>
   </footer>
 </article>
-<%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
-<%%= link_to 'Back', <%= index_helper %>_path %>
+
