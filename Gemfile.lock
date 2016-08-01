@@ -3,7 +3,7 @@ PATH
   specs:
     actionscaffold (0.2.6.pre)
       bootstrap (~> 4.0.0.alpha3)
-      rails
+      rails (~> 5.0.0)
       responders (~> 2.2.0)
 
 GEM
