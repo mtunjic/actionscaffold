@@ -8,8 +8,7 @@
       <dt><strong><%= attribute.human_name %>:</strong></dt>
       <dd><%- if attribute.reference? %><%%= @<%= singular_table_name %>.<%= attribute.name %>.name %>
       <% elsif  attribute.type == :boolean -%><%%=  check_box_tag "<%= singular_table_name %>", @<%= singular_table_name %>.<%= attribute.name %>, @<%= singular_table_name %>.<%= attribute.name %> %>
-        <% else %><%%= @<%= singular_table_name %>.<%= attribute.name %> %>
-      <% end -%></dd>
+        <% else %><%%= @<%= singular_table_name %>.<%= attribute.name %> %><% end %></dd>
 <% end -%>
     </dl>
   </section>
