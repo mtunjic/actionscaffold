@@ -18,8 +18,7 @@
       <tr>
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
         <td><%- if attribute.reference? %><%%= <%= singular_table_name %>.<%= attribute.name %>.name %>
-      <% elsif  attribute.type == :boolean -%><%%=  check_box_tag "<%= singular_table_name %>", <%= singular_table_name %>.<%= attribute.name %>, <%= singular_table_name %>.<%= attribute.name %> %>
-      <% else -%><%%= <%= singular_table_name %>.<%= attribute.name %> %><% end -%></td>
+      <% elsif  attribute.type == :boolean -%><%%= check_box_tag "<%= singular_table_name %>", <%= singular_table_name %>.<%= attribute.name %>, <%= singular_table_name %>.<%= attribute.name %> %><% else %><%%= <%= singular_table_name %>.<%= attribute.name %> %><% end -%></td>
 <% end -%>
       <td>
         <%%= link_to 'Show', <%= singular_table_name %> %> /
