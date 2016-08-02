@@ -4,6 +4,7 @@
 * View support for bootstrap 4, uikit, skeleton and html5boilerplate.
 * Select box for a belongs_to relationship.
 * Nested resources
+* HTML5 controls
 
 
 ## Usage
@@ -127,6 +128,7 @@ $ gem install actionscaffold
 - [ ] [uikit](http://getuikit.com)
 - [ ] [skeleton](http://getskeleton.com)
 - [ ] [html5boilerplate](https://html5boilerplate.com)
+- [ ] HTML5 controls
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/mtunjic/actionscaffold.

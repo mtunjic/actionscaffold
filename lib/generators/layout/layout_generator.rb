@@ -1,3 +1,9 @@
+#
+#  layout_generator.rb
+#
+#  Created by Marko Tunjic on 15/07/16.
+#  Copyright © 2016 Marko Tunjic. All rights reserved.
+#
 class LayoutGenerator < Rails::Generators::Base
   source_root File.expand_path('../templates', __FILE__)
 

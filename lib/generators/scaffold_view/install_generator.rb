@@ -15,7 +15,7 @@ module ScaffoldView
       source_root File.expand_path("../templates/#{ui}", __FILE__)
 
       def copy_template_file
-        %w(index show _form).each do |template|
+        %w(index show _form new edit).each do |template|
           copy_file "#{template}.html.erb",
             "lib/templates/erb/scaffold/#{template}.html.erb"
         end
