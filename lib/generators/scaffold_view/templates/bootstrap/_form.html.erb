@@ -27,7 +27,13 @@
       <%- if attribute.reference? -%>
         <%%= f.label :<%= attribute.column_name %> %>
         <%%= f.collection_select :<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :name, {prompt: true}, { class: "form-control"}  %>
-      <%- else -%>
+      <%- elsif  attribute.type == :boolean -%>
+        <div class="checkbox">
+          <label class="checkbox-inline">
+            <%%=  check_box_tag "<%= singular_table_name %>", @<%= singular_table_name %>.<%= attribute.name %>, @<%= singular_table_name %>.<%= attribute.name %> %><%= attribute.name.camelize %>
+          </label>
+        </div>
+      <% else -%>
         <%%= f.label :<%= attribute.name %> %>
         <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, class: "form-control" %>
       <%- end -%>
