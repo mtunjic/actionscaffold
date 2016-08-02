@@ -100,6 +100,7 @@ Result:
   <%= f.email_field :email, autofocus: true, class: "form-control" %>
 </div>
 ```
+![new](http://i.imgur.com/MZxgPSR.png "new")
 ![Index](http://i.imgur.com/wx3bOBE.png "Index")
 ![Errors](http://i63.tinypic.com/302b22f.png =600x "Errors")
 ![Forms](http://i66.tinypic.com/349b0og.png =600x "Forms")
