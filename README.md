@@ -80,14 +80,17 @@ Or with custom theme:
 $ rails g scaffold_view:install --ui=bootstrap
 ```
 
-Import Bootstrap styles in app/assets/stylesheets/application.scss:
+Generate application layout with or without css files
+```bash
+$ rails g layout bootstrap [--skip-stylesheet] # [skeleton, html5boilerplate]
+```
+
+... or manualy import Bootstrap styles in app/assets/stylesheets/application.scss:
 ```scss
 // app/assets/stylesheets/application.scss
 @import "bootstrap";
 @import "bootstrap-theme"
 ```
-
-
 
 Result:
 ```erb
@@ -105,9 +108,8 @@ Result:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'responders'
+gem 'responders'  # (optional) Add this if you want to use scaffold_controller
 gem 'actionscaffold'
-gem 'bootstrap', '~> 4.0.0.alpha3'
 ```
 
 And then execute:

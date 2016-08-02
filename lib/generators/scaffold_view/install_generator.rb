@@ -9,6 +9,7 @@ module ScaffoldView
     class InstallGenerator < Rails::Generators::Base
 
       # TODO: add opt args
+      argument :ui, :type => :string, :default => "bootstrap"
       ui = "bootstrap"
       desc "This generator override default scaffold generator for views."
       source_root File.expand_path("../templates/#{ui}", __FILE__)

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%%= yield(:title) %></title>
+    <%%= csrf_meta_tags %>
+    <%%= stylesheet_link_tag    'application', media: 'all' %>
+    <%%= javascript_include_tag 'slider' %>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container" >
+      <%% flash.each do |name, msg| %>
+        <%%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%% end %>
+      <%%= yield %>
+    </div>
+  </body>
+</html>
