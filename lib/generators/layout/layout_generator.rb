@@ -4,25 +4,24 @@
 #  Created by Marko Tunjic on 15/07/16.
 #  Copyright © 2016 Marko Tunjic. All rights reserved.
 #
-module ScaffoldView
-  module Generators
-    class LayoutGenerator < Rails::Generators::Base
-      source_root File.expand_path('../templates', __FILE__)
 
-      argument :ui, :type => :string, :default => "bootstrap"
+class LayoutGenerator < Rails::Generators::Base
+  source_root File.expand_path('../templates', __FILE__)
 
-      class_option :stylesheet, :type        => :boolean,
-                                :default     => true,
-                                :description => "Include stylesheets"
+  argument :ui, :type => :string, :default => "bootstrap"
 
-      def generate_layout
-        if options.stylesheet?
-          copy_file "application.scss", "public/stylesheets/application.scss"
-        end
-        template "layout.html.erb", "app/views/layouts/application.html.erb"
+  class_option :stylesheet, :type        => :boolean,
+                            :default     => true,
+                            :description => "Include stylesheets"
 
-      end
+  def generate_layout
+    if options.stylesheet?
+      copy_file "application.scss", "public/stylesheets/application.scss"
     end
+    template "layout.html.erb", "app/views/layouts/application.html.erb"
 
   end
 end
+
+
+

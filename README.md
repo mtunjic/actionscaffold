@@ -5,6 +5,7 @@
 * Select box for a belongs_to relationship.
 * Nested resources
 * HTML5 controls
+* Bootstrap themes
 
 
 ## Usage
@@ -80,16 +81,16 @@ View generator (Bootstrap by default):
 $ rails g scaffold_view:install
 ```
 
-Generate application layout with or without css files
+Generate application layout
 ```bash
-$ rails g layout bootstrap [--skip-stylesheet]
+$ rails g layout bootstrap
 ```
 
-... or manualy import Bootstrap styles in app/assets/stylesheets/application.scss:
-```scss
+... or manualy import Bootstrap styles from in app/assets/stylesheets/application.css:
+```css
 // app/assets/stylesheets/application.scss
-@import "bootstrap";
-@import "bootstrap-theme"
+ *= require "bootstrap/bootstrap.min"
+ *= require "bootstrap/bootstrap-theme.min"
 ```
 
 Results:
@@ -149,9 +150,11 @@ $ gem install actionscaffold
 # To do
 - [X] [bootstrap 4](http://getbootstrap.com)
 - [ ] [uikit](http://getuikit.com)
-- [ ] [skeleton](http://getskeleton.com)
+- [X] [skeleton](http://getskeleton.com)
 - [ ] [html5boilerplate](https://html5boilerplate.com)
 - [ ] HTML5 controls
+- [ ] Bootstrap themes
+- [ ] Layouts
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/mtunjic/actionscaffold.
