@@ -8,14 +8,16 @@ module ScaffoldView
    module Generators
     class InstallGenerator < Rails::Generators::Base
 
-      # TODO: add opt args
-      ui = "bootstrap"
+      source_root File.expand_path("../templates", __FILE__)
+
       desc "This generator override default scaffold generator for views."
-      source_root File.expand_path("../templates/#{ui}", __FILE__)
+      argument :ui, :type    => :string,
+                    :default     => "bootstrap",
+                    :description => "Include stylesheets"
 
       def copy_template_file
-        %w(index show _form).each do |template|
-          copy_file "#{template}.html.erb",
+        %w(index show _form new edit).each do |template|
+          copy_file "#{ui}/#{template}.html.erb",
             "lib/templates/erb/scaffold/#{template}.html.erb"
         end
       end

@@ -4,6 +4,7 @@
 * View support for bootstrap 4, uikit, skeleton and html5boilerplate.
 * Select box for a belongs_to relationship.
 * Nested resources
+* HTML5 controls
 
 
 ## Usage
@@ -80,14 +81,17 @@ Or with custom theme:
 $ rails g scaffold_view:install --ui=bootstrap
 ```
 
-Import Bootstrap styles in app/assets/stylesheets/application.scss:
+Generate application layout with or without css files
+```bash
+$ rails g layout bootstrap [--skip-stylesheet] # [skeleton, html5boilerplate]
+```
+
+... or manualy import Bootstrap styles in app/assets/stylesheets/application.scss:
 ```scss
 // app/assets/stylesheets/application.scss
 @import "bootstrap";
 @import "bootstrap-theme"
 ```
-
-
 
 Result:
 ```erb
@@ -96,6 +100,7 @@ Result:
   <%= f.email_field :email, autofocus: true, class: "form-control" %>
 </div>
 ```
+![new](http://i.imgur.com/MZxgPSR.png "new")
 ![Index](http://i.imgur.com/wx3bOBE.png "Index")
 ![Errors](http://i63.tinypic.com/302b22f.png =600x "Errors")
 ![Forms](http://i66.tinypic.com/349b0og.png =600x "Forms")
@@ -105,9 +110,8 @@ Result:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'responders'
+gem 'responders'  # (optional) Add this if you want to use scaffold_controller
 gem 'actionscaffold'
-gem 'bootstrap', '~> 4.0.0.alpha3'
 ```
 
 And then execute:
@@ -125,6 +129,7 @@ $ gem install actionscaffold
 - [ ] [uikit](http://getuikit.com)
 - [ ] [skeleton](http://getskeleton.com)
 - [ ] [html5boilerplate](https://html5boilerplate.com)
+- [ ] HTML5 controls
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/mtunjic/actionscaffold.

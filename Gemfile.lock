@@ -1,8 +1,7 @@
 PATH
   remote: .
   specs:
-    actionscaffold (0.2.6.pre)
-      bootstrap (~> 4.0.0.alpha3)
+    actionscaffold (0.3.1)
       rails (~> 5.0.0)
       responders (~> 2.2.0)
 
@@ -47,15 +46,9 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.1)
-    autoprefixer-rails (6.3.7)
-      execjs
-    bootstrap (4.0.0.alpha3.1)
-      autoprefixer-rails (>= 6.0.3)
-      sass (>= 3.4.19)
     builder (3.2.2)
     concurrent-ruby (1.0.2)
     erubis (2.7.0)
-    execjs (2.7.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -103,7 +96,6 @@ GEM
     rake (11.2.2)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
-    sass (3.4.22)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)

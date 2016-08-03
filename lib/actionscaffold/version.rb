@@ -1,3 +1,3 @@
 module ActionScaffold
-  VERSION = '0.2.6.pre'
+  VERSION = '0.3.1'
 end
