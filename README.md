@@ -101,9 +101,13 @@ Results:
   <%= f.email_field :email, autofocus: true, class: "form-control" %>
 </div>
 ```
+
 ![new](http://i.imgur.com/MZxgPSR.png "new")
+
 ![Index](http://i.imgur.com/wx3bOBE.png "Index")
+
 ![Errors](http://i63.tinypic.com/302b22f.png =600x "Errors")
+
 ![Forms](http://i66.tinypic.com/349b0og.png =600x "Forms")
 
 ## Skeleton
@@ -113,18 +117,20 @@ $ rails g scaffold_view:install skeleton
 
 Generate application layout with or without css files
 ```bash
-$ rails g layout skeleton
+$ rails g layout skeleton 
 ```
 
 ... or manualy import skeleton styles in app/assets/stylesheets/application.css:
-```scss
-// app/assets/stylesheets/application.css
+```css
+/*
  *= require "skeleton/normalize"
  *= require "skeleton/skeleton"
+ */
 ```
 
 Results:
 ![Form](http://i.imgur.com/gZUtlDx.png "Form")
+
 ![Index](http://i.imgur.com/dyKnhPl.png "Index")
 
 
