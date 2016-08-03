@@ -74,7 +74,7 @@ end
 ```
 
 
-### Bootstrap
+## Bootstrap
 
 View generator (Bootstrap by default):
 ```bash
@@ -106,14 +106,14 @@ Results:
 ![Errors](http://i63.tinypic.com/302b22f.png =600x "Errors")
 ![Forms](http://i66.tinypic.com/349b0og.png =600x "Forms")
 
-### Skeleton
+## Skeleton
 ```bash
 $ rails g scaffold_view:install skeleton
 ```
 
 Generate application layout with or without css files
 ```bash
-$ rails g layout skeleton [--skip-stylesheet]
+$ rails g layout skeleton
 ```
 
 ... or manualy import skeleton styles in app/assets/stylesheets/application.css:
