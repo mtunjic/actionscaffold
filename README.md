@@ -93,7 +93,10 @@ $ rails g layout bootstrap [--skip-stylesheet] # [skeleton, html5boilerplate]
 @import "bootstrap-theme"
 ```
 
-Result:
+Results:
+
+### Bootstrap
+
 ```erb
 <div class="form-group">
   <%= f.label :email %>
@@ -104,6 +107,9 @@ Result:
 ![Index](http://i.imgur.com/wx3bOBE.png "Index")
 ![Errors](http://i63.tinypic.com/302b22f.png =600x "Errors")
 ![Forms](http://i66.tinypic.com/349b0og.png =600x "Forms")
+
+### Skeleton
+
 
 
 ## Installation

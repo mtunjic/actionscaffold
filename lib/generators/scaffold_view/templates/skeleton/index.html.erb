@@ -1,6 +1,6 @@
 <h1><%= plural_table_name.titleize %></h1>
 <br />
-<table class="table table-striped">
+<table class="u-full-width">
   <thead>
     <tr>
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
@@ -30,4 +30,4 @@
   </tbody>
 </table>
 <br>
-<%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_table_name %>_path %>
+<%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_table_name %>_path, class: "button button-primary" %>

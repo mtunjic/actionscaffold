@@ -1,18 +1,17 @@
-<article class="panel panel-default">
-  <header class="panel-heading">
+<article>
+  <header>
     <h1><%= singular_table_name.titleize %></h1>
   </header>
-  <section class="panel-body">
-    <dl class="dl-horizontal">
+  <section>
+    <dl>
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
       <dt><strong><%= attribute.human_name %>:</strong></dt>
       <dd><%- if attribute.reference? -%><%%= @<%= singular_table_name %>.<%= attribute.name %>.name %><%- elsif  attribute.type == :boolean -%><%%=  check_box_tag "<%= singular_table_name %>", @<%= singular_table_name %>.<%= attribute.name %>, @<%= singular_table_name %>.<%= attribute.name %> %><% else -%><%%= @<%= singular_table_name %>.<%= attribute.name %> %><%- end -%></dd>
 <% end -%>
     </dl>
   </section>
-  <footer class="panel-footer">
-    <%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
-    <%%= link_to 'Back', <%= index_helper %>_path %>
+  <footer>
   </footer>
 </article>
-
+<%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: "button button-primary" %>
+<%%= link_to 'Back', <%= index_helper %>_path, class: "button button-primary" %>
