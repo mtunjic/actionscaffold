@@ -72,18 +72,17 @@ class BooksController < ApplicationController
 end
 ```
 
+
+### Bootstrap
+
 View generator (Bootstrap by default):
 ```bash
 $ rails g scaffold_view:install
 ```
-Or with custom theme:
-```bash
-$ rails g scaffold_view:install --ui=bootstrap
-```
 
 Generate application layout with or without css files
 ```bash
-$ rails g layout bootstrap [--skip-stylesheet] # [skeleton, html5boilerplate]
+$ rails g layout bootstrap [--skip-stylesheet]
 ```
 
 ... or manualy import Bootstrap styles in app/assets/stylesheets/application.scss:
@@ -94,8 +93,6 @@ $ rails g layout bootstrap [--skip-stylesheet] # [skeleton, html5boilerplate]
 ```
 
 Results:
-
-### Bootstrap
 
 ```erb
 <div class="form-group">
@@ -109,6 +106,25 @@ Results:
 ![Forms](http://i66.tinypic.com/349b0og.png =600x "Forms")
 
 ### Skeleton
+```bash
+$ rails g scaffold_view:install skeleton
+```
+
+Generate application layout with or without css files
+```bash
+$ rails g layout skeleton [--skip-stylesheet]
+```
+
+... or manualy import skeleton styles in app/assets/stylesheets/application.css:
+```scss
+// app/assets/stylesheets/application.css
+ *= require "skeleton/normalize"
+ *= require "skeleton/skeleton"
+```
+
+Results:
+![Form](http://i.imgur.com/gZUtlDx.png "Form")
+![Index](http://i.imgur.com/dyKnhPl.png "Index")
 
 
 

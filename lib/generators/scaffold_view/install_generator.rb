@@ -17,7 +17,7 @@ module ScaffoldView
 
       def copy_template_file
         # copy stylesheets
-        directory 'stylesheets', "vendor/assets/stylesheets/#{ui}"
+        directory "#{ui}/stylesheets", "vendor/assets/stylesheets/#{ui}"
         # copy templates
         %w(index show _form new edit).each do |template|
           copy_file "#{ui}/#{template}.html.erb",
