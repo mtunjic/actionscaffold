@@ -1,4 +1,6 @@
-# Action Scaffold
+# Action Scaffold 
+
+[![Gem Version](https://badge.fury.io/rb/actionscaffold.svg)](https://badge.fury.io/rb/actionscaffold)
 
 * Clean & DRY Rails controllers.
 * View support for bootstrap 4, uikit, skeleton and html5boilerplate.
