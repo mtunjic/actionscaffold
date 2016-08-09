@@ -156,7 +156,8 @@ $ gem install actionscaffold
 ```
 
 # To do
-- [X] [bootstrap 4](http://getbootstrap.com)
+- [X] [bootstrap 3](http://getbootstrap.com)
+- [ ] [bootstrap 4](http://getbootstrap.com)
 - [ ] [uikit](http://getuikit.com)
 - [X] [skeleton](http://getskeleton.com)
 - [ ] [html5boilerplate](https://html5boilerplate.com)
